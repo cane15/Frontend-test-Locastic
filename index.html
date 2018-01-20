@@ -1,39 +1,391 @@
-<html lang="en">
+<!DOCTYPE html>
+
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Locastico Test</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <style>
+        @media only screen and (min-width: 770px) {
+            .hidden-container .hidden-menu-tab {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 769px) {
+            body {
+                width: 769px;
+            }
+            .hidden-navbar .container,
+            .dropdown,
+            .dropdown-content,
+            .dropbtn {
+                display: none;
+            }
+            ul {
+                max-width: 769px !important;
+            }
+            .slideshow-container {
+                max-width: 769px !important;
+                ;
+            }
+            .slideshow-container img {
+                width: 768px !important;
+                height: 250px !important;
+            }
+            .rowItem3,
+            .rowItem6 {
+                display: none;
+            }
+            .rowItem1,
+            .rowItem4 {
+                margin-right: 10px !important;
+                margin-left: 10px !important;
+            }
+            .rowItem2,
+            .rowItem5 {
+                margin-left: 10px !important;
+                margin-right: 10px !important;
+            }
+            .rowItem1,
+            .rowItem2,
+            .rowItem4,
+            .rowItem5 {
+                width: 363px !important;
+                margin-bottom: 41px !important;
+            }
+            .rowItem1 img,
+            .rowItem2 img,
+            .rowItem3 img,
+            .rowItem4 img,
+            .rowItem5 img,
+            .rowItem6 img {
+                width: 363px !important;
+                height: 230px !important;
+            }
+            .loadMore button {
+                margin-left: 225px !important;
+                margin-right: 221px !important;
+            }
+            .demo-text {
+                text-align: center !important;
+            }
+            input[type=text],
+            select,
+            textarea {
+                margin-left: 135px !important;
+                margin-right: 135px !important;
+            }
+            input[type=submit] {
+                margin-left: 135px !important;
+                margin-right: 138px !important;
+            }
+            .container label {
+                margin-left: 138px !important;
+            }
+            .footer {
+                width: 768px !important;
+            }
+        }
+
+        @media only screen and (min-width: 640px) {
+            .hidden-navbar .hidden-menu-mob {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 640px) {
+            body {
+                width: 375px;
+            }
+            .hidden-navbar .hidden-menu-tab {
+                display: none;
+            }
+            ul {
+                max-width: 376px !important;
+            }
+            .slideshow-container img {
+                width: 375px !important;
+                height: 400px !important;
+            }
+            .text {
+                bottom: 173px !important;
+            }
+            .sidenav {
+                position: absolute !important;
+                max-width: 375px !important;
+            }
+            .rowItem2,
+            .rowItem5 {
+                display: none;
+            }
+            .rowItem1,
+            .rowItem4 {
+                width: 375px !important;
+                margin-left: 10x !important;
+                margin-right: 9px !important;
+            }
+            .rowItem1 img,
+            .rowItem4 img {
+                width: 356px !important;
+                height: 200px !important;
+            }
+            .loadMore button {
+                width: 354px !important;
+                height: 60px !important;
+                margin-left: 10px !important;
+                margin-right: 10px !important;
+            }
+            .demo-text {
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+            input[type=text],
+            select,
+            textarea {
+                width: 354px !important;
+                margin-left: 10px !important;
+                margin-right: 10px !important;
+            }
+            input[type=submit] {
+                width: 354px !important;
+                margin-left: 10px !important;
+                margin-right: 10px !important;
+            }
+            .container label {
+                width: 354px !important;
+                margin-left: 10px !important;
+                margin-right: 10px !important;
+            }
+            .container h1 {
+                padding-top: 49px !important;
+            }
+            .container {
+                width: 375px !important;
+                max-height: 865px !important;
+            }
+            .footer {
+                width: 375px !important;
+                height: 119px !important;
+            }
+            #fleft {
+                float: center !important;
+                margin-top: 17px !important;
+                margin-left: 95px !important;
+                margin-right: 93px !important;
+            }
+            #fright {
+                float: center !important;
+                margin-bottom: 33px !important;
+                margin-right: 107px !important;
+                margin-right: 104px !important;
+            }
+        }
+
+        @media only screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!--Navigacioni bar -->
-    <div classs="nav">
+    <div class="hidden-container" style="font-family: roboto" ;>
         <ul>
-            <li class="desktop-nav">
-                <a href="contact.html">Contact</a>
+            <li class="hidden-menu-tab">
+                <span style="font-size:18px;cursor:pointer;margin-right:5px;" onclick="openNavTab()">&#9776; </span>
             </li>
-            <li class="desktop-nav">
-                <a href="about.html">About</a>
+            <li class="hidden-menu-mob">
+                <span style="font-size:18px;cursor:pointer;margin-right:5px;" onclick="openNavMob()">&#9776; </span>
+            </li>
+            <li class="container">
+                <a href="contact.html"> Contact</a>
+            </li>
+            <li class="container">
+                <a href="about.html"> About</a>
             </li>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Works</a>
+                <a href="javascript:void(0)" class="dropbtn"> Works</a>
 
-                <div class="dropdown=content">
-                    <a href="#">Manistra na pome</a>
-                    <a href="#">Biftek - Medium rare+</a>
-                    <a href="#">Picigin 2016</a>
-                    <a href="#">Jos jedan link eto tako</a>
+
+                <div class="dropdown-content">
+                    <a href="#"> Manistra na pome </a>
+                    <a href="#"> Biftek - Medium rare + </a>
+                    <a href="#"> Picigin 2016 </a>
+                    <a href="#"> Jos jedan link eto tako </a>
                 </div>
+            </li>
+            <li class="container">
+                <a href="index.html ">Home</a>
+            </li>
 
-            </li>
-            <li class="desktop-nav">
-                <a href="index.html">Home</a>
-            </li>
-            <h1 id="logo-nav">Locastic</h1>
+            <h1 class="logo-nav">
+                <b>Locastic</b>
+            </h1>
+
         </ul>
     </div>
+
+
+    <!-- SLIDESHOW-->
+    <div class="slideshow-header">
+        <div class="mySlides fade">
+            <img src="img1.jpg">
+            <div class="text">
+                <b>"Moj najtišši naslov ikad"</b>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <img src="img2.jpg">
+            <div class="text">
+                <b>"Moj natišši naslov ikad"</b>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <img src="img3.jpg">
+            <div class="text">
+                <b>Moj natišši naslov ikad</b>
+            </div>
+        </div>
+    </div>
+
+    <!-- html desktop page-->
+    <div class="rowItem1">
+        <img src="img4.jpg">
+        <div class="rowText">
+            <b>Roboto 40 px Size, Spacing 44px - Comment On The Impotrtance Of Humen Life</b>
+        </div>
+        <div class="rowTextDesc">
+            Roboto Regular, 22px, Spacing 34px - Lorem Ipsum issimply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s.
+        </div>
+        <div class="rowFull">
+            <a href="https://fonts.google.com/specimen/Roboto" target="_blank">
+                <b>View full article
+                </b>
+            </a>
+        </div>
+    </div>
+    <div class="rowItem2">
+        <img src="img4.jpg">
+        <div class="rowText">
+            <b>Roboto 40px Size, Spacing 44px - Comment On The Importance Of Human Life</b>
+        </div>
+        <div class="rowTextDesc">
+            Roboto Regular, 22px, Spacing 34px - Lorem Ipsum issimply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s.
+        </div>
+        <div class="rowFull">
+            <a href="https://fonts.google.com/specimen/Roboto" target="_blank">
+                <b>View full article
+                </b>
+            </a>
+        </div>
+    </div>
+    <div class="rowItem3">
+        <img src="img4.jpg">
+        <div class="rowText">
+            <b>Roboto 40px Size, Spacing 44px - Comment On The Importance Of Human Life</b>
+        </div>
+        <div clas="rowTextDesc">
+            Roboto Regular, 22px, Spacing 34px - Lorem Ipsum issimply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s.
+        </div>
+        <div class="rowFull">
+            <a href="https://fonts.google.com/specimen/Roboto" target="_blank">
+                <b>View full article
+                </b>
+            </a>
+        </div>
+    </div>
+
+    <!--new row on desktop page-->
+    <div class="rowItem4">
+        <img src="img4.jpg">
+        <div class="rowText">
+            <b>Roboto 40 px Size, Spacing 44px - Comment On The Impotrtance Of Humen Life</b>
+        </div>
+        <div class="rowTextDesc">
+            Roboto Regular, 22px, Spacing 34px - Lorem Ipsum issimply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s.
+        </div>
+        <div class="rowFull">
+            <a href="https://fonts.google.com/specimen/Roboto" target="_blank">
+                <b>View full article
+                </b>
+            </a>
+        </div>
+    </div>
+    <div class="rowItem5">
+        <img src="img4.jpg">
+        <div class="rowText">
+            <b>Roboto 40px Size, Spacing 44px - Comment On The Importance Of Human Life</b>
+        </div>
+        <div class="rowTextDesc">
+            Roboto Regular, 22px, Spacing 34px - Lorem Ipsum issimply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s.
+        </div>
+        <div class="rowFull">
+            <a href="https://fonts.google.com/specimen/Roboto" target="_blank">
+                <b>View full article
+                </b>
+            </a>
+        </div>
+    </div>
+    <div class="rowItem6">
+        <img src="img4.jpg">
+        <div class="rowText">
+            <b>Roboto 40px Size, Spacing 44px - Comment On The Importance Of Human Life</b>
+        </div>
+        <div clas="rowTextDesc">
+            Roboto Regular, 22px, Spacing 34px - Lorem Ipsum issimply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s.
+        </div>
+        <div class="rowFull">
+            <a href="https://fonts.google.com/specimen/Roboto" target="_blank">
+                <b>View full article
+                </b>
+            </a>
+        </div>
+    </div>
+
+    <!--load more button-->
+
+    <div id="hidden button" class="loadMore">
+        <button onclick="loadmoreFunction()">
+            <b>Load More</b>
+        </button>
+    </div>
+
+    <p id="demo" class="demo-text"></p>
+
+    <script type="text/javascript">
+        //<!--slideshow function-->
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 8000); //Change image every 2 seconds
+        }
+    </script>
+
 </body>
 
 </html>
