@@ -33,7 +33,7 @@ ul {
 li {
     float: right;
 }
-
+ 
 li a,
 .dropbtn,
 .hidden-menu-tab,
@@ -84,15 +84,94 @@ li a:hover,
     height: 75px;
 }
 
-.header {
-    visibility: visible;
-    width: 1024px;
-    height: 250px;
-    top: 75px;
-    left: 0px;
-    z-index: 3;
+.slideshow-header {
+    max-width: 1024px;
+    position: relative;
+    margin: auto;
 }
 
+.slideshow-header img {
+    width: 1024px;
+    height: 250px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 50px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 107px;
+    width: 100%;
+    text-align: center;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.rowItem1,
+.rowItem4 {
+    margin-left: 10px;
+}
+
+.rowItem3,
+.rowItem6 {
+    margin-right: 10px;
+}
+
+.rowItem2,
+.rowItem5 {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.rowItem1,
+.rowItem2,
+.rowItem3,
+.rowItem4,
+.rowItem5,
+.rowItem6 {
+    width: 322px;
+    float: left;
+    margin-bottom: 49px;
+    margin-top: 25px;
+}
+
+.rowItem1 img,
+.rowItem2 img,
+.rowItem3 img,
+.rowItem4 img,
+.rowItem5 img,
+.rowItem6 img {
+    padding: 0px;
+    text-align: center;
+}
 .text {
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -107,4 +186,55 @@ li a:hover,
 .hidden-menu-tab,
 .hidden-menu-mob {
     display: none;
+}
+
+.rowText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: #4a4a4a;
+    letter-spacing: 0px;
+    line-height: 44px;
+}
+
+.rowTextDesc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #747474;
+    letter-spacing: 0px;
+    line-height: 34px;
+}
+
+.rowFull a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #00a1d1;
+    letter-spacing: 0px;
+    line-height: 34px;
+    text-decoration: none;
+}
+
+.loadMore {
+    position: center;
+    margin-bottom: 49px;
+}
+
+.loadMore button {
+    background-color: #b0b0b0;
+    width: 321px;
+    height: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 0px;
+    margin-left: 351px;
+    margin-right: 352px
+}
+
+.loadMore :hover {
+    background: #333333;
+    color: white;
 }
