@@ -4,195 +4,262 @@
 
 <head>
     <title>Locastico Test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <style>
-        @media only screen and (min-width: 770px) {
-            .hidden-container .hidden-menu-tab {
-                display: none;
-            }
+    <style>       
+        .logo-nav {
+            color: white;
+            position: absolute;
+            left: 38px;
+            font-size: 30px;
+        }
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 120px;
         }
 
-        @media only screen and (max-width: 769px) {
-            body {
-                width: 769px;
-            }
-            .hidden-container .container,
-            .dropdown,
-            .dropdown-content,
-            .dropbtn {
-                display: none;
-            }
-            ul {
-                max-width: 769px !important;
-            }
-            .slideshow-container {
-                max-width: 769px !important;
-                ;
-            }
-            .slideshow-container img {
-                width: 768px !important;
-                height: 250px !important;
-            }
-            .rowItem3,
-            .rowItem6 {
-                display: none;
-            }
-            .rowItem1,
-            .rowItem4 {
-                margin-right: 10px !important;
-                margin-left: 10px !important;
-            }
-            .rowItem2,
-            .rowItem5 {
-                margin-left: 10px !important;
-                margin-right: 10px !important;
-            }
-            .rowItem1,
-            .rowItem2,
-            .rowItem4,
-            .rowItem5 {
-                width: 363px !important;
-                margin-bottom: 41px !important;
-            }
-            .rowItem1 img,
-            .rowItem2 img,
-            .rowItem3 img,
-            .rowItem4 img,
-            .rowItem5 img,
-            .rowItem6 img {
-                width: 363px !important;
-                height: 230px !important;
-            }
-            .loadMore button {
-                margin-left: 225px !important;
-                margin-right: 221px !important;
-            }
-            .demo-text {
-                text-align: center !important;
-            }
-            input[type=text],
-            select,
-            textarea {
-                margin-left: 135px !important;
-                margin-right: 135px !important;
-            }
-            input[type=submit] {
-                margin-left: 135px !important;
-                margin-right: 138px !important;
-            }
-            .container label {
-                margin-left: 138px !important;
-            }
-            .footer {
-                width: 768px !important;
-            }
+        .shadownav {
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            opacity: 0.5;
         }
 
-        @media only screen and (min-width: 640px) {
-            .hidden-container .hidden-menu-mob {
-                display: none;
-            }
+        .sidenav a {
+            padding: 21px 21px 21px 21px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            color: white;
+            text-align: center;
         }
 
-        @media only screen and (max-width: 640px) {
-            body {
-                width: 375px;
-            }
-            .hidden-container .hidden-menu-tab {
-                display: none;
-            }
-            ul {
-                max-width: 376px !important;
-            }
-            .slideshow-container img {
-                width: 375px !important;
-                height: 400px !important;
-            }
-            .text {
-                bottom: 173px !important;
-            }
-            .sidenav {
-                position: absolute !important;
-                max-width: 375px !important;
-            }
-            .rowItem2,
-            .rowItem5 {
-                display: none;
-            }
-            .rowItem1,
-            .rowItem4 {
-                width: 375px !important;
-                margin-left: 10x !important;
-                margin-right: 9px !important;
-            }
-            .rowItem1 img,
-            .rowItem4 img {
-                width: 356px !important;
-                height: 200px !important;
-            }
-            .loadMore button {
-                width: 354px !important;
-                height: 60px !important;
-                margin-left: 10px !important;
-                margin-right: 10px !important;
-            }
-            .demo-text {
-                margin-left: 0px !important;
-                margin-right: 0px !important;
-            }
-            input[type=text],
-            select,
-            textarea {
-                width: 354px !important;
-                margin-left: 10px !important;
-                margin-right: 10px !important;
-            }
-            input[type=submit] {
-                width: 354px !important;
-                margin-left: 10px !important;
-                margin-right: 10px !important;
-            }
-            .contact label {
-                width: 354px !important;
-                margin-left: 10px !important;
-                margin-right: 10px !important;
-            }
-            .contact h1 {
-                padding-top: 49px !important;
-            }
-            .contact {
-                width: 375px !important;
-                max-height: 865px !important;
-            }
-            .footer {
-                width: 375px !important;
-                height: 119px !important;
-            }
-            #fleft {
-                float: center !important;
-                margin-top: 17px !important;
-                margin-left: 95px !important;
-                margin-right: 93px !important;
-            }
-            #fright {
-                float: center !important;
-                margin-bottom: 33px !important;
-                margin-right: 107px !important;
-                margin-right: 104px !important;
-            }
+        .sidenav .mini-dropdown a {
+            font-size: 18px;
+            padding: 5px 5px 5px 5px;
+            margin-bottom: 5px;
+            display: none;
         }
 
-        @media only screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-            .sidenav a {
-                font-size: 18px;
-            }
+        .show a {
+            display: block !important;
         }
-    </style>
+
+        .sidenav a:hover,
+        .offcanvas a:focus {
+            color: #00a1d1;
+        }
+
+        .sidenav .closebtn:hover,
+        .offcanvas .closebtn:focus {
+            color: #333;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 30px;
+            margin-left: 50px;
+            color: white;
+        }
+            @media only screen and (min-width: 770px) {
+                .hidden-container .hidden-menu-tab {
+                    display: none;
+                }
+            }
+
+            @media only screen and (max-width: 769px) {
+                body {
+                    width: 769px;
+                }
+                .hidden-container .desktop-con,
+                .dropdown,
+                .dropdown-content,
+                .dropbtn {
+                    display: none;
+                }
+                ul {
+                    max-width: 769px !important;
+                }
+                .slideshow-header {
+                    max-width: 769px !important;
+                    ;
+                }
+                .slideshow-header img {
+                    width: 768px !important;
+                    height: 250px !important;
+                }
+                .rowItem3,
+                .rowItem6 {
+                    display: none;
+                }
+                .rowItem1,
+                .rowItem4 {
+                    margin-right: 10px !important;
+                    margin-left: 10px !important;
+                }
+                .rowItem2,
+                .rowItem5 {
+                    margin-left: 10px !important;
+                    margin-right: 10px !important;
+                }
+                .rowItem1,
+                .rowItem2,
+                .rowItem4,
+                .rowItem5 {
+                    width: 363px !important;
+                    margin-bottom: 41px !important;
+                }
+                .rowItem1 img,
+                .rowItem2 img,
+                .rowItem3 img,
+                .rowItem4 img,
+                .rowItem5 img,
+                .rowItem6 img {
+                    width: 363px !important;
+                    height: 230px !important;
+                }
+                .loadMore button {
+                    margin-left: 225px !important;
+                    margin-right: 221px !important;
+                }
+                .demo-text {
+                    text-align: center !important;
+                }
+                input[type=text],
+                select,
+                textarea {
+                    margin-left: 135px !important;
+                    margin-right: 135px !important;
+                }
+                input[type=submit] {
+                    margin-left: 135px !important;
+                    margin-right: 138px !important;
+                }
+                .contact label {
+                    margin-left: 138px !important;
+                }
+                .footer {
+                    width: 768px !important;
+                }
+            }
+
+            @media only screen and (min-width: 640px) {
+                .hidden-container .hidden-menu-mob {
+                    display: none;
+                }
+            }
+
+            @media only screen and (max-width: 640px) {
+                body {
+                    width: 375px;
+                }
+                .hidden-container .hidden-menu-tab {
+                    display: none;
+                }
+                ul {
+                    max-width: 376px !important;
+                }
+                .slideshow-header img {
+                    width: 375px !important;
+                    height: 400px !important;
+                }
+                .text {
+                    bottom: 173px !important;
+                }
+                .sidenav {
+                    position: absolute !important;
+                    max-width: 375px !important;
+                }
+                .rowItem2,
+                .rowItem5 {
+                    display: none;
+                }
+                .rowItem1,
+                .rowItem4 {
+                    width: 375px !important;
+                    margin-left: 10x !important;
+                    margin-right: 9px !important;
+                }
+                .rowItem1 img,
+                .rowItem4 img {
+                    width: 356px !important;
+                    height: 200px !important;
+                }
+                .loadMore button {
+                    width: 354px !important;
+                    height: 60px !important;
+                    margin-left: 10px !important;
+                    margin-right: 10px !important;
+                }
+                .demo-text {
+                    margin-left: 0px !important;
+                    margin-right: 0px !important;
+                }
+                input[type=text],
+                select,
+                textarea {
+                    width: 354px !important;
+                    margin-left: 10px !important;
+                    margin-right: 10px !important;
+                }
+                input[type=submit] {
+                    width: 354px !important;
+                    margin-left: 10px !important;
+                    margin-right: 10px !important;
+                }
+                .contact label {
+                    width: 354px !important;
+                    margin-left: 10px !important;
+                    margin-right: 10px !important;
+                }
+                .contact h1 {
+                    padding-top: 49px !important;
+                }
+                .contact {
+                    width: 375px !important;
+                    max-height: 865px !important;
+                }
+                .footer {
+                    width: 375px !important;
+                    height: 119px !important;
+                }
+                #fleft {
+                    float: center !important;
+                    margin-top: 17px !important;
+                    margin-left: 95px !important;
+                    margin-right: 93px !important;
+                }
+                #fright {
+                    float: center !important;
+                    margin-bottom: 33px !important;
+                    margin-right: 107px !important;
+                    margin-right: 104px !important;
+                }
+            }
+
+            @media only screen and (max-height: 450px) {
+                .sidenav {
+                    padding-top: 15px;
+                }
+                .sidenav a {
+                    font-size: 18px;
+                }
+            }
+        </style>
 </head>
 
 <body>
@@ -200,19 +267,19 @@
     <div class="hidden-container" style="font-family: roboto" ;>
         <ul>
             <li class="hidden-menu-tab">
-                <span style="font-size:18px;cursor:pointer;margin-right:5px;" onclick="openNavTab()">&#9776; </span>
+                <span style="font-size:18px;cursor:pointer;margin-right:5px;" onclick="openNavTab()">&#9776;</span>
             </li>
             <li class="hidden-menu-mob">
-                <span style="font-size:18px;cursor:pointer;margin-right:5px;" onclick="openNavMob()">&#9776; </span>
+                <span style="font-size:18px;cursor:pointer;margin-right:5px;" onclick="openNavMob()">&#9776;</span>
             </li>
-            <li class="container">
+            <li class="desktop-con">
                 <a href="contact.html"> Contact</a>
             </li>
-            <li class="container">
+            <li class="desktop-con">
                 <a href="about.html"> About</a>
             </li>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn"> Works</a>
+                <a href="javascript:void(0)" class="dropbtn">Works</a>
 
 
                 <div class="dropdown-content">
@@ -222,18 +289,33 @@
                     <a href="#"> Jos jedan link eto tako </a>
                 </div>
             </li>
-            <li class="container">
+            <li class="desktop-con">
                 <a href="index.html ">Home</a>
             </li>
-
-            <h1 class="logo-nav">
-                <b>Locastic</b>
-            </h1>
-
+            <h1 class="logo-nav">Locastic</h1>
         </ul>
     </div>
 
 
+    
+    <!-- side bar for tablet or mobile--> 
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        style="height: 31px; width: 100%; text-align: right; right: 0; background-color: #00a1d1;">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="javascript:void(0)" class="dropbtn-mini" onclick="openDrop()">Works</a>
+        <div id="mini-drop" class="mini-dropdown">
+            <a href="#">Manistra na pome</a>
+            <a href="#">Biftek - Medium rare+</a>
+            <a href="#">Picigin 2016</a>
+            <a href="#">Jos jedan link eto tako</a>
+        </div>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div id="myShadow" class="shadownav">
+    </div>
+    
     <!-- SLIDESHOW-->
     <div class="slideshow-header">
         <div class="mySlides fade">
@@ -255,11 +337,6 @@
             </div>
         </div>
     </div>
-  <!-- side bar for tablet or mobile-->
-  
-  
-
-
 
     <!-- html desktop page-->
     <div class="rowItem1">
@@ -273,8 +350,7 @@
         </div>
         <div class="rowFull">
             <a href="https://fonts.google.com/specimen/Roboto" target="_blank">
-                <b>View full article
-                </b>
+                <b>View full article</b>
             </a>
         </div> 
     </div>
@@ -289,8 +365,7 @@
         </div>
         <div class="rowFull">
             <a href="https://fonts.google.com/specimen/Roboto" target="_blank">
-                <b>View full article
-                </b>
+                <b>View full article</b>
             </a>
         </div>
     </div>
@@ -305,8 +380,7 @@
         </div>
         <div class="rowFull">
             <a href="https://fonts.google.com/specimen/Roboto" target="_blank">
-                <b>View full article
-                </b>
+                <b>View full article</b>
             </a>
         </div>
     </div>
@@ -363,13 +437,42 @@
 
     <!--load more button-->
 
-    <div id="hidden button" class="loadMore">
+    <div id="hidden-button" class="loadMore">
         <button onclick="loadmoreFunction()">
             <b>Load More</b>
         </button>
     </div>
 
     <p id="demo" class="demo-text"></p>
+
+    <!--contact form-->
+    <div class="contact">
+        <form action="cont_page">
+            <h1>Contact form</h1>
+
+            <label for="cname">Contact name</label>
+            <input type="text" id="cname" name="contactname" style="height:80px;
+            width:493px;">
+
+            <label for="eadress">Email address</label>
+            <input type="text" id="eadress" name="emailaddress"
+            style="height:80px; width:493px;">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" style="height:202px; width:493px;"></textarea>
+
+            <input type="submit" value="Send Message">
+
+        </form>
+    </div>
+
+    <!--footer text-->
+    <div class="footer">
+        <ul>
+            <li id="fleft">2018 Locastic Test Page</li>
+            <li id="fright">By frontend developer</li>
+        </ul>
+    </div>
 
     <script type="text/javascript">
         //<!--slideshow function-->
@@ -388,6 +491,50 @@
             }
             slides[slideIndex - 1].style.display = "block";
             setTimeout(showSlides, 8000); //Change image every 2 seconds
+        }
+
+        //,!--load more functionand hide button-->
+        function loadmoreFunction() {
+            document.getElementById("demo").innerHTML = "Noting more to show...";
+            var x = document.getElementById("hidden-button");
+            if(x.style.display === 'none') {
+                x.style.display = 'block';
+            }else{
+                x.style.display = 'none';
+            }
+        }
+
+        //<!--side bar navigation function-->
+        function openNavTab() {
+            document.getElementById("mySidenav").style.width = "50%";
+            document.getElementById("myShadow").style.width = "100%";
+        }
+
+        function openNavMob() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("myShadow").style.width = "0";
+        }
+
+        //<!--side bar dropdown menu-->
+        function openDrop() {
+            document.getElementById("mini-drop").classList.toggle("show");
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn-mini')) {
+                var dropdowns = document.getElementsByClassName("mini-dropdown");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
         }
     </script>
 
